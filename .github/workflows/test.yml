@@ -11,6 +11,10 @@ jobs:
       fail-fast: false
 
     steps:
+    - name: Install tools
+      run: |
+          sudo apt-get install libtool-bin automake makeinfo
+          
     - uses: actions/checkout@v2
       with:
         submodules: recursive
