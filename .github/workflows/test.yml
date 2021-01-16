@@ -13,7 +13,7 @@ jobs:
     steps:
     - name: Install tools
       run: |
-          sudo apt-get install libtool-bin automake
+          sudo apt-get install autotools-dev
           
     - uses: actions/checkout@v2
       with:
