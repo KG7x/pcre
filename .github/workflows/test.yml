@@ -22,7 +22,8 @@ jobs:
     - name: Build
       run: |
           chmod +x ./configure
-          autoconf
+          aclocal
+          automake --add-missing -c
           ./configure --disable-shared --disable-cpp -q --prefix=/release
           make -j 4
     - uses: actions/upload-artifact@v2
