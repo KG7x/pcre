@@ -23,7 +23,7 @@ jobs:
       run: |
           chmod +x ./configure
           aclocal
-          automake --add-missing -c
+          automake --add-missing
           ./configure --disable-shared --disable-cpp -q --prefix=/release
           make -j 4
     - uses: actions/upload-artifact@v2
